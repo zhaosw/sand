@@ -59,7 +59,7 @@ public class MGLRender2 implements GLSurfaceView.Renderer {
 
         gl.glViewport(0, 0, width, height);
 
-        gl.glMatrixMode(GL10.GL_PROJECTION);
+        gl.glMatrixMode(GL10.GL_PROJECTION);//投影
         gl.glLoadIdentity();
         GLU.gluPerspective(gl, 45, aspect, 0.1f, 100.0f);
 //        gl.glMatrixMode(GL10.GL_MODELVIEW);
