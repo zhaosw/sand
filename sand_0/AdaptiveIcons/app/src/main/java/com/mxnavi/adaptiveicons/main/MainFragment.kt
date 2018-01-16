@@ -12,6 +12,7 @@ import com.mxnavi.adaptiveicons.base.BaseFragment
 import com.mxnavi.adaptiveicons.opengl.DrawFragment
 import com.mxnavi.adaptiveicons.opengl.es.DrawFragment1
 import com.mxnavi.adaptiveicons.scheduled.Scheduled
+import com.mxnavi.adaptiveicons.scheduled.ScheduledFragment
 import com.mxnavi.adaptiveicons.scheduled.ThreadPoolManager
 import kotlinx.android.synthetic.main.fragment_main.*
 
@@ -93,9 +94,9 @@ class MainFragment : BaseFragment(),View.OnClickListener {
                 .addToBackStack(null).commit()
     }
 
-    fun startOpenGLES(){
-        val drawFragment1 = DrawFragment1()
-        mMainActivity!!.supportFragmentManager.beginTransaction().add(R.id.main_frame,drawFragment1, DrawFragment1.TAG)
+    fun startScheduled(){
+        val scheduledFragment = ScheduledFragment()
+        mMainActivity!!.supportFragmentManager.beginTransaction().add(R.id.main_frame,scheduledFragment, ScheduledFragment.TAG)
                 .addToBackStack(null).commit()
     }
 
@@ -106,7 +107,7 @@ class MainFragment : BaseFragment(),View.OnClickListener {
                 startOpenGL()
             }
             R.id.button1 ->{
-                startOpenGLES()
+                startScheduled()
             }
 
             R.id.button2 ->{
